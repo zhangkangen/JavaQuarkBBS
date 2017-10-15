@@ -99,10 +99,11 @@ public class UserServiceImpl extends BaseServiceImpl<UserDao, User> implements U
     }
 
     @Override
-    public void updataUserIcon(String token, String icon) {
+    public void updateUserIcon(String token, String icon) {
         User cacheuser = redisService.getString(REDIS_USER_KEY + token);
-        if (cacheuser == null)
+        if (cacheuser == null){
             throw new ServiceProcessException("用户Session过期，请重新登录");
+        }
         User user = repository.findOne(cacheuser.getId());
         user.setIcon(icon);
         repository.save(user);

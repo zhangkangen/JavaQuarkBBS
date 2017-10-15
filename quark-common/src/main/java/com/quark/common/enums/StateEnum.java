@@ -2,7 +2,18 @@ package com.quark.common.enums;
 
 public enum StateEnum {
 
-    SUCCESS(200),WARN(400),ERROR(500);
+    /**
+     * 成功
+     */
+    SUCCESS(200),
+    /**
+     * 警告
+     */
+    WARN(400),
+    /**
+     * 错误
+     */
+    ERROR(500);
 
     private int state;
 

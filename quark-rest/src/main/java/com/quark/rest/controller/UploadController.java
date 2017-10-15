@@ -50,7 +50,7 @@ public class UploadController {
         if (!file.isEmpty()) {
             try {
                 String icon = FileUtils.uploadFile(file);
-                userService.updataUserIcon(token,icon);
+                userService.updateUserIcon(token,icon);
                 return new UploadResult(0, new UploadResult.Data(icon));
 
             } catch (IOException e) {

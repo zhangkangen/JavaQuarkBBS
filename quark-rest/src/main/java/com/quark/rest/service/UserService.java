@@ -78,7 +78,7 @@ public interface UserService extends BaseService<User> {
      * @param token
      * @param icon
      */
-    void updataUserIcon(String token,String icon);
+    void updateUserIcon(String token,String icon);
 
     /**
      * 修改用户的密码
